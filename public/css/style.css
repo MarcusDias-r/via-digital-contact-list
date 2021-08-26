@@ -1,0 +1,344 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(/font/Montserrat-Thin.ttf);
+    font-weight: 100;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(/font/Montserrat-ExtraLight.ttf);
+    font-weight: 200;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(/font/Montserrat-Light.ttf);
+    font-weight: 300;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(/font/Montserrat-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(/font/Montserrat-Medium.ttf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(/font/Montserrat-SemiBold.ttf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(/font/Montserrat-Bold.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(/font/Montserrat-ExtraBold.ttf);
+    font-weight: 800;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(/font/Montserrat-Black.ttf);
+    font-weight: 900;
+}
+*{
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+    /* background-color: #18191a; */
+}
+.main-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    position: relative;
+    width: 500px;
+    height: 800px;
+    box-shadow: 0px 0px 20px rgb(139, 138, 138);
+    border-radius: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: all 0.5s;
+    background: white;
+}
+.contact-list-title{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 500;
+    overflow: hidden;
+    margin-top: 20px;
+
+}
+.list-header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+}
+.list-header form{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+.search-input{
+    height: 40px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    width: 80%;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    outline: none;
+}
+.header-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    min-width: 40px;
+    border: 2px solid #D1D5DB;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+.header-btn:hover{
+    background-color: #E5E7EB;
+}
+.header-btn:nth-child(1){
+    margin-right: 10px;
+}
+.header-btn img{
+    height: 50%;
+}
+.contact-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 10px;
+    margin-top: 30px;
+    max-height: 470px;
+    overflow: auto;
+    box-sizing: border-box;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    max-height: 80px;
+    width: 80%;
+    padding: 10px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    transition: all 0.5s;
+}
+.contact:hover{
+    border-bottom: 2px solid #333;
+}
+.contact-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.contact-info{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.contact-photo-frame{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    width: 45px;
+    background-color: cornsilk;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+.contact-photo-frame img{
+    height: 100%;
+}
+.dropdown-btn{
+    display: flex;
+    cursor: pointer;
+    font-size: 23px;
+    font-weight: 600;
+    padding: 5px 10px;
+    color: #333;
+    border-radius: 50%;
+    transition: all 0.5s;
+    border: 1px solid transparent;
+}
+.dropdown-btn:hover{
+    border: 1px solid #D1D5DB;
+    background-color: #E5E7EB;
+}
+.contact p{
+    margin-left: 10px;
+    font-weight: 600;
+    color: #333;
+}
+.more-info .info-box{
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+.new-contact-area{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    left: 0;
+    background: white;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+}
+.edit-contact-area{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    left: 0;
+    background: white;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+}
+.hide{
+    transform: translateX(-100%);
+}
+.return-btn{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    transition: all 0.5s;
+}
+.return-btn img{
+    height: 40%;
+}
+.return-btn p{
+    margin-left: 15px;
+}
+.return-btn:hover{
+    background: #E5E7EB;
+}
+.new-contact-form-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    display: flex;
+    width: 80%;
+    box-sizing: border-box;
+    align-items: center;
+}
+.input-area{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+.input-row{
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+.input-area label{
+   
+    margin-left: 10px;
+    font-weight: 600;
+    color: #333;
+    font-size: 15px;
+}
+.input-area input{
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    outline: none;
+    margin-top: 5px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+ .address{
+    width: 70%;
+}
+.address_number{
+    width:30%;
+}
+.input-row .input-area:nth-child(1){
+    margin-right: 20px;
+}
+.new-contact-form-container button{
+    cursor: pointer;
+    margin-top: 13px;
+    height: 50px;
+    width: 100%;
+    border: 2px solid #D1D5DB;
+    border-radius: 30px;
+    font-size: 20px;
+    transition: all 0.5s;
+}
+.new-contact-form-container form{
+    width: 100%;
+}
+.new-contact-form-container button:hover{
+    background: #E5E7EB;
+    border: 2px solid #ccc;
+}
+.file-label label{
+    cursor: pointer;
+    margin-left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 150px;
+    border-radius: 10px;
+    font-weight: 600;
+    border: 2px solid #ccc;
+    color: black;
+    transition: all 0.5s;
+}
+.file-label label:hover{
+    background: #E5E7EB;
+    border: 2px solid #ccc;
+}
+.error-area{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    position: relative;
+    width: 100%;
+}
+.error-area ul{
+    position: absolute;
+    top:0;
+    left: -20px;
+   }
+.error{
+    margin-bottom: 5px;
+    color: rgb(197, 21, 21);
+}
