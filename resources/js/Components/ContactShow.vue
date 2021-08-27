@@ -11,7 +11,7 @@
 
                     <div class="contact-info-name" v-if="contact.name">
                         <h2>{{contact.name}}</h2>
-                        <p>{{'( '+contact.type_of_contact+' )'}}</p>
+                        <p v-if="contact.type_of_contact">{{'( '+contact.type_of_contact+' )'}}</p>
                     </div>
                 </div>
                 <div class="contact-info-body">
