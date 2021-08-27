@@ -10,7 +10,7 @@
                     </div>
 
                     <div class="contact-info-name" v-if="contact.name">
-                        <h2>{{contact.name}} </h2>
+                        <h2>{{contact.name}}</h2>
                     </div>
                 </div>
                 <div class="contact-info-body">
@@ -20,21 +20,20 @@
                             <span>Telefone</span>
                             <p>{{contact.phone}}</p>
                         </div>
+                    </div>
+                    <div class="information-row">
                         <div class="information-box" v-if="contact.email">
                             <span>Email</span>
                             <p>{{contact.email}}</p>
                         </div>
+                        
+                    </div>
+
+                    <div class="information-row">
                         <div class="information-box" v-if="contact.cep">
                             <span>Cep</span>
                             <p>{{contact.cep}}</p>
                         </div>
-                        
-                    </div>
-                    <div class="information-row">
-                        
-                    </div>
-                    <div class="information-row">
-
                         <div class="information-box" v-if="contact.city">
                             <span>Cidade</span>
                             <p>{{contact.city}}</p>
@@ -44,7 +43,9 @@
                             <span>Bairro</span>
                             <p>{{contact.neighborhood}}</p>
                         </div>
+                    </div>
 
+                    <div class="information-row">
                         <div class="information-box" v-if="contact.address">
                             <span>Rua</span>
                             <p>{{contact.address}}</p>
@@ -54,9 +55,7 @@
                             <span>Número</span>
                             <p>{{contact.address_number}}</p>
                         </div>
-
                     </div>
-                   
                 </div>
             </div>
         </div>
@@ -92,6 +91,11 @@ export default ({
 </script>
 
 <style>
+    .contact-info-body{
+        padding: 10px 20px;
+        border-radius: 20px;
+        box-shadow: inset 0px 0px 10px #E5E7EB;
+    }
     .modal-container{
         width: 100vw;
         height: 100vh;
@@ -105,7 +109,7 @@ export default ({
         overflow-y:auto;
         display: flex;
     }
-
+    
     .show-modal{
         display: flex;
     }
@@ -116,14 +120,16 @@ export default ({
         align-items: flex-start;
         padding: 20px 10px;
         border-radius: 20px;
-        /* box-shadow: 1px 1px 10px black; */
+        box-shadow: 1px 1px 40px rgb(39, 39, 39);
         min-width: 500px;
-        background-color: white;
+        background-color: #F3F4F6;
+        
     }
     .modal .contact-info{
         display: flex;
         flex-direction: column;
         padding: 25px;
+        width: 100%;
     }
     .contact-info-header{
         display: flex;

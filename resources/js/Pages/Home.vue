@@ -3,7 +3,7 @@
     <section class="main-area">
         <main class="container">
             <div class="contact-list-title">
-                <p>Contatos</p> 
+                <p>Contatos<img src="icon/contact.png"></p>
             </div>
 
             <div class="list-header">
@@ -14,6 +14,10 @@
                 <div class="header-btn" @click="newContactWindow('new-contact-area')">
                     <img src="icon/plus.png" alt="">
                 </div>
+            </div>
+
+            <div class="contact-list empty-warn" v-if="contacts === null">
+                <div class="warn">Não há nenhum contato cadastrado, adicione clicando no botão à direita.</div> 
             </div>
 
             <div class="contact-list" v-if="contacts">
@@ -136,7 +140,6 @@ import ContactShow from '@/Components/ContactShow'
 
             deleteContact(id)
             {
-                // console.log(id);
                 var result = confirm('Esse contato será removido da lista');
                 if(result === true){
                     axios.delete(route('contact.destroy',{'contact':id})).then(
@@ -173,8 +176,6 @@ import ContactShow from '@/Components/ContactShow'
                     .then(
                         response =>{
                             this.contacts = response.data
-                    }).catch(
-                        error =>{
                     })
                 
                 }else{
@@ -189,37 +190,5 @@ import ContactShow from '@/Components/ContactShow'
             this.getContacts();
         }
     })
-
-
 </script>
 
-<style>
-    .btn-area{
-        display: flex;
-    }
-    .btn-area a{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 25px;
-        width: 25px;
-        border-radius: 5px;
-        text-decoration: none;
-        box-shadow: 0px 0px 5px rgb(114, 114, 114);
-    }
-    .btn-edit{
-        background: rgb(3, 156, 3);
-    }
-    .btn-destroy{
-        background: rgb(190, 20, 20);
-    }
-    .btn-area a:nth-child(1)
-    {
-        margin-right: 10px;
-    }
-
-    .btn-area img{
-        height: 70%;
-    }
-    
-</style>
