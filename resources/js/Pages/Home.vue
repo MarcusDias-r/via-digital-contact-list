@@ -75,7 +75,6 @@ import ContactShow from '@/Components/ContactShow'
                 contacts:null,
                 contactId:null,
                 openedWindow:null,
-                dropdown:null,
                 modal:false,
                 selectedContact:null,
                 search:'',

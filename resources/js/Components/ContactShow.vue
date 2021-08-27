@@ -11,6 +11,7 @@
 
                     <div class="contact-info-name" v-if="contact.name">
                         <h2>{{contact.name}}</h2>
+                        <p>{{'( '+contact.type_of_contact+' )'}}</p>
                     </div>
                 </div>
                 <div class="contact-info-body">
@@ -173,6 +174,11 @@ export default ({
     .information-box p{
         margin-top: 10px;
     }
+    .contact-info-name p{
+        padding-top: 5px;
+        font-size: 14px;
+        color: #333;
+    }   
     
 
 </style>
